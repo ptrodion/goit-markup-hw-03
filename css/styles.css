@@ -121,9 +121,14 @@ body {
   padding-bottom: 24px;
 }
 
-.header-container {
+.header-text-center {
   display: flex;
   align-items: center;
+}
+
+.header-container {
+  display: flex;
+  /* align-items: center; */
 }
 
 .header-nav {
