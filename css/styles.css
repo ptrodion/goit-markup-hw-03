@@ -7,6 +7,42 @@
   --text-secondary-color: #2e2f42;
   --text-accent-color: #404bbf;
   --text-logo: #4d5ae5;
+
+  --main-gaps: 40px;
+}
+
+/**-----------RESET-------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
 }
 
 /** set common values start */
@@ -17,15 +53,15 @@ body {
   background-color: var(--bkg-primary-color);
 }
 
-.list {
-  list-style-type: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 /**-----------COMPONENTS-------------*/
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
 
 .logo {
   color: var(--text-logo);
@@ -79,8 +115,26 @@ body {
 }
 
 /**-----------HEADER-------------*/
-/*.header { } */
-/*.header-nav {} */
+.header {
+  background-color: aqua;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-menu {
+  display: flex;
+  gap: var(--main-gaps);
+  margin-left: 76px;
+}
 
 .header-link {
   font-weight: 500;
@@ -92,9 +146,16 @@ body {
 .header-link:is(:hover, :focus) {
   color: var(--text-accent-color);
 }
-.header-address {
-  font-style: normal;
+
+/* .header-adress {
+} */
+
+.header-menu-adress {
+  display: flex;
+  gap: var(--main-gaps);
+  margin-left: 332px;
 }
+
 .header-contact-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -106,15 +167,23 @@ body {
 }
 
 /** -----------HERO-------------*/
-/*.hero {} */
+.hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
 
 .hero-title {
+  width: 496px;
+  margin: 0 auto;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
 }
 .hero-button {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 32px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -122,7 +191,6 @@ body {
   letter-spacing: 0.04em;
   color: inherit;
   background: #4d5ae5;
-  cursor: pointer;
 }
 
 .hero-button:is(:hover, :focus) {
@@ -176,7 +244,6 @@ body {
   letter-spacing: 0.04em;
   color: #4d5ae5;
   background-color: #f4f4fd;
-  cursor: pointer;
 }
 /* .projects-tittle {} */
 /* .projects-subtitle {} */
