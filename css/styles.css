@@ -207,7 +207,6 @@ body {
 
 /** -----------ABOUT-------------*/
 .about {
-  background-color: tomato;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -216,7 +215,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  outline: 2px solid turquoise;
 }
 
 .about-container .item {
@@ -227,9 +225,7 @@ body {
 /* .about-title {}*/
 /* .about-text {} */
 /**-----------PERFOMACE-------------*/
-.performance {
-  background-color: green;
-}
+/* .performance {} */
 .perfomance-list {
   display: flex;
   padding-bottom: 120px;
