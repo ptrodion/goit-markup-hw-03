@@ -7,7 +7,6 @@
   --text-secondary-color: #2e2f42;
   --text-accent-color: #404bbf;
   --text-logo: #4d5ae5;
-
   --main-gaps: 40px;
 }
 
@@ -23,18 +22,18 @@ p {
   margin: 0;
 }
 
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
-}
-
-ul {
-  padding-left: 0;
-  margin: 0;
-  list-style-type: none;
 }
 
 address {
@@ -45,15 +44,14 @@ img {
   display: block;
 }
 
-/** set common values start */
+/**-----------COMPONENTS-------------*/
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: var(--text-primary-color);
   background-color: var(--bkg-primary-color);
 }
-
-/**-----------COMPONENTS-------------*/
 
 .container {
   width: 1158px;
@@ -73,6 +71,7 @@ body {
   text-transform: uppercase;
 }
 
+/* it describes the text of our logotip */
 .logo-text {
   color: var(--text-secondary-color);
 }
@@ -80,7 +79,8 @@ body {
   background: var(--bkg-secondary-color);
   color: #ffffff;
 }
-/* it`s descride headings H3  */
+
+/* it describes headings H3  */
 .secondary-subtitle {
   color: var(--text-secondary-color);
   font-weight: 500;
@@ -89,14 +89,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-.lead {
-  color: var(--text-primary-color);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-/* it`s descride headings H2 */
+/* it describes headings H2 */
 .primary-subtitle {
   color: var(--text-secondary-color);
   font-size: 36px;
@@ -114,15 +107,19 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* is describes paragraph design */
+.lead {
+  color: var(--text-primary-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
 /**-----------HEADER-------------*/
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-}
-
-.header-text-center {
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-container {
@@ -132,11 +129,11 @@ body {
 .header-nav {
   display: flex;
   margin-right: auto;
+  align-items: center;
 }
 
 .header-menu {
   display: flex;
-  /* gap: var(--main-gaps); */
   margin-left: 76px;
 }
 
@@ -217,32 +214,55 @@ body {
 
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  outline: 2px solid turquoise;
 }
 
 .about-container .item {
-  width: calc((100% - 72px) / 4);
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 /*.about-main-title {}  * */
 /* .about-title {}*/
 /* .about-text {} */
 /**-----------PERFOMACE-------------*/
-/* .performance {} */
+.performance {
+  background-color: green;
+}
+.perfomance-list {
+  display: flex;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 /* .performance-title {} */
 /**-----------TEAM-------------*/
-/* .team {} */
+.team {
+  background: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 /*.team-title {} */
 .team-list {
-  background: #f4f4fd;
+  display: flex;
+  gap: 24px;
 }
 
 .team-item {
+  margin-top: 72px;
   background: var(--bkg-primary-color);
+}
+
+.team-container {
+  margin: 32px 16px;
 }
 
 .team-employee-title {
   text-align: center;
+  margin-bottom: 8px;
 }
 .team-text {
   text-align: center;
