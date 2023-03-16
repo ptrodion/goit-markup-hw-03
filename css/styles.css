@@ -42,6 +42,8 @@ address {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /**-----------COMPONENTS-------------*/
@@ -113,6 +115,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /**-----------HEADER-------------*/
@@ -188,8 +203,9 @@ body {
   height: 56px;
   margin: 0 auto;
   border-radius: 4px;
+  border: 1px solid transparent;
 
-  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -224,15 +240,15 @@ body {
 }
 /* .about-text {} */
 /**-----------PERFOMACE-------------*/
-/* .performance {
-} */
+.performance {
+  padding-bottom: 120px;
+}
 
 .performance-title {
   margin-bottom: 72px;
 }
 .perfomance-list {
   display: flex;
-  padding-bottom: 120px;
   flex-wrap: wrap;
   gap: var(--main-gaps);
 }
@@ -254,10 +270,11 @@ body {
 .team-item {
   /* width: calc((100 - 72px) / 4); */
   background: var(--bkg-primary-color);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-container {
-  margin: 32px 16px;
+  padding: 32px 16px;
 }
 
 .team-employee-title {
@@ -319,6 +336,7 @@ body {
 .projects-button:is(:hover, :focus, ) {
   color: #ffffff;
   background: #404bbf;
+  border-color: transparent;
 }
 
 .project-list-jobs {
